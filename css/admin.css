@@ -1,0 +1,32 @@
+#adminmenu #toplevel_page_sportspress .toplevel_page_sportspress div.wp-menu-image:before {
+	content: '\e612';
+}
+
+.sp-data-table input[type=checkbox][readonly] {
+  opacity: 0.3;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sp-data-table input[type=checkbox]:indeterminate {
+  position: relative;
+}
+
+.sp-data-table input[type=checkbox]:indeterminate:before {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #1e8cbe;
+  border-left: 2px solid #1e8cbe;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 50%;
+  height: 50%;
+}
+
+@media screen and (max-width: 782px) {
+  .sp-data-table input[type=checkbox]:indeterminate:before {
+    border-bottom: 3px solid #1e8cbe;
+    border-left: 3px solid #1e8cbe;
+  }
+}
