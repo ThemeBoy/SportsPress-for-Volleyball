@@ -154,28 +154,6 @@ class SportsPress_Volleyball {
 	}
 
 	/**
-	 * Append own goals to box score.
-	*/
-	public function players( $data = array(), $lineups = array(), $subs = array(), $mode = 'values' ) {
-		if ( 'icons' == $mode ) return $data;
-
-		foreach ( $data as $id => $performance ) {
-			$owngoals = sp_array_value( $performance, 'owngoals', 0 );
-			if ( $owngoals ) {
-				$option = sp_get_main_performance_option();
-				$goals = sp_array_value( $performance, $option, 0 );
-				if ( $goals ) {
-					$data[ $id ][ $option ] = $goals . ', ' . $owngoals . ' ' . __( 'OG', 'sportspress' );
-				} else {
-					$data[ $id ][ $option ] = $owngoals . ' ' . __( 'OG', 'sportspress' );
-				}
-			}
-		}
-
-		return $data;
-	}
-
-	/**
 	 * Define default sport.
 	*/
 	public function default_sport() {
